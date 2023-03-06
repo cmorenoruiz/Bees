@@ -8,7 +8,7 @@ package bees;
  *
  * @author cmorenoruiz
  */
-public class Reina extends Abeja{
+public class Reina extends Abeja {
 
     public Reina() {
         super(Abeja.Sexo.FEMENINO);
@@ -17,14 +17,16 @@ public class Reina extends Abeja{
     public Tipo getTipo() {
         return Abeja.Tipo.REINA;
     }
+//La reina es la única hembra que puede ser fecundada1 por los zánganos ;
+//pone huevos fecundados, que dan origen a abejas obreras
+//y huevos sin fecundar que dan origen a zánganos
     
-    public Huevo ponHuevo(Zangano zangano){
+    public Huevo ponHuevo(Zangano zangano) {
         return new Huevo(Abeja.Sexo.FEMENINO);
     }
-    public Huevo ponHuevo(){
+
+    public Huevo ponHuevo() {
         return new Huevo(Abeja.Sexo.MASCULINO);
     }
-    
-    
-    
+
 }

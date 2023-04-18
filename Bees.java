@@ -39,6 +39,12 @@ public class Bees {
         huevo1.muestra();
         huevo2.muestra();
         
+        Colmena blanca =new Colmena();
+        blanca.muestra();
+        blanca.guardaHuevo(huevo2);
+        blanca.guardaHuevo(huevo1);
+        blanca.muestra();
+        
 
     }
 

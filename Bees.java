@@ -44,6 +44,8 @@ public class Bees {
         blanca.guardaHuevo(huevo2);
         blanca.guardaHuevo(huevo1);
         blanca.muestra();
+        blanca.eclosionaHuevo(0, 1);
+        blanca.muestra();
         
 
     }

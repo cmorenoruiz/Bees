@@ -58,6 +58,19 @@ public class Colmena {
             }
         }return false;
     }
+    
+    public boolean eclosionaHuevo(Integer fila, Integer columna){
+        if ((fila <0)||(columna<0)||(fila>panal.length)||(columna>panal[0].length)){
+            return false;
+        }
+        //obtenemos una nueva abeja
+        Abeja nuevaAbeja= panal[fila][columna].eclosionar();
+        //la añadimos al enjambre
+        enjambre.add(nuevaAbeja);
+        //vaciamos la posición del panal
+        panal[fila][columna]=null;
+        return true;
+    }
 
     public boolean panalIsFull() {
         for (int i = 0; i < panal.length; ++i) {

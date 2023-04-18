@@ -14,6 +14,8 @@ public class Huevo {
     Integer jaleaIngerida = 0;
     Integer alimentoIngerido = 0;
 
+    static final Integer MINIMOJALEAPARASERREINA = 20;
+
     public Huevo(Abeja.Sexo sexo) {
         this.sexo = sexo;
     }
@@ -42,12 +44,26 @@ public class Huevo {
         this.alimentoIngerido = alimentoIngerido;
     }
 
-    public void sumaJaleaIngerida(Integer moreJalea){
-        setJaleaIngerida(getJaleaIngerida()+moreJalea);
+    public void sumaJaleaIngerida(Integer moreJalea) {
+        setJaleaIngerida(getJaleaIngerida() + moreJalea);
     }
+
     public void muestra() {
-        System.out.println("Soy un huevo de sexo " + getSexo()+ " y he comido jalea: " +getJaleaIngerida());
+        System.out.println("Soy un huevo de sexo " + getSexo() + " y he comido jalea: " + getJaleaIngerida());
     }
-    
+
+    public Abeja eclosionar() {
+        //Si es de sexo masculino, siempre devolveré un zángano
+        if (getSexo() == Abeja.Sexo.MASCULINO) {
+            return new Zangano();
+        } else {
+            //será una reina si ha comido suficiente jalea
+            if (getJaleaIngerida() >= MINIMOJALEAPARASERREINA) {
+                return new Reina();
+            } else {
+                return new Obrera();
+            }
+        }
+    }
 
 }

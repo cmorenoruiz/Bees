@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package bees;
+package Bees;
 
 /**
  *
@@ -17,11 +17,18 @@ public class Bees {
         // TODO code application logic here
         // Voy a crear tres abejas y a mostrarlas por pantalla
         Abeja abeja1, abeja2;
-        //abeja1 = new Obrera();
+        abeja1 = new Obrera();
         abeja2 = new Zangano();
         Abeja abeja3 = new Reina();
+        abeja1.muestra();
         abeja2.muestra();
         abeja3.muestra();
+        //abeja1.segregaCera(); No sepuede pedirle a una Abeja este método
+         Obrera obrera1 = (Obrera) abeja1;
+         //Opero con la misma abeja, tratándola como Abeja o como Obrera
+        obrera1.muestra();
+        //abeja1.segregaCera();
+        obrera1.segregaCera();
 
     }
 

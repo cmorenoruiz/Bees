@@ -71,6 +71,10 @@ public class Colmena {
         panal[fila][columna]=null;
         return true;
     }
+    public boolean addAbeja(Abeja abeja){
+        return enjambre.add(abeja);
+    
+    }
 
     public boolean panalIsFull() {
         for (int i = 0; i < panal.length; ++i) {

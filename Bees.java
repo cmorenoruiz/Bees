@@ -40,10 +40,18 @@ public class Bees {
         huevo2.muestra();
         
         Colmena blanca =new Colmena();
+        //añado mis abejas
+        blanca.addAbeja (reina);
+        blanca.addAbeja(obrera1);
+        Obrera obrera2=new Obrera();
+        blanca.addAbeja(obrera2);
+        blanca.addAbeja(zangano1);
         blanca.muestra();
         blanca.guardaHuevo(huevo2);
         blanca.guardaHuevo(huevo1);
+        System.out.println("Después de guardar los huevos");
         blanca.muestra();
+        System.out.println("Después de eclosionar un huevo");
         blanca.eclosionaHuevo(0, 1);
         blanca.muestra();
         

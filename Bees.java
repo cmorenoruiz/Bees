@@ -29,6 +29,16 @@ public class Bees {
         obrera1.muestra();
         //abeja1.segregaCera();
         obrera1.segregaCera();
+        //Probando a poner huevos
+        Zangano zangano1= new Zangano();
+        zangano1.muestra();
+        Reina reina= new Reina();
+        Huevo huevo1, huevo2;
+        huevo1=reina.ponHuevo();
+        huevo2=reina.ponHuevo(zangano1);
+        huevo1.muestra();
+        huevo2.muestra();
+        
 
     }
 

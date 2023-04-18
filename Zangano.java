@@ -17,4 +17,7 @@ public class Zangano extends Abeja{
     public Tipo getTipo() {
         return Abeja.Tipo.ZANGANO;
     }
+    public void trabaja(){
+        System.out.println("Soy un zángano y no hago nada");
+    }
 }
